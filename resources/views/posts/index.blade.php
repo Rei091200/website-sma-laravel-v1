@@ -26,11 +26,11 @@
                                     <tbody>
                                         @foreach($posts as $post)
                                         <tr>
-                                            <td>{{$posts->id}}</td>
-                                            <td>{{$posts->title}}</td>
-                                            <td>{{$posts->user->name}}</td>
+                                            <td>{{$post->id}}</td>
+                                            <td>{{$post->title}}</td>
+                                            <td>{{$post->user->name}}</td>
                                             <td>
-                                                <a target="_blank" href="{{route('site.single.post' $post->slug)}}" class="btn btn-info btn-sm">View</a>
+                                                <a target="_blank" href="{{route('site.single.post', $post->slug)}}" class="btn btn-info btn-sm">View</a>
                                                 <a href="#" class="btn btn-warning btn-sm">Edit</a>
                                                 <a href="#" class="btn btn-danger btn-sm delete">Hapus</a>
                                             </td>
