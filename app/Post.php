@@ -13,4 +13,13 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function thumbnail()
+    {
+        if($this->thumbnail){
+            return $this->thumbnail;
+        } else{
+            return asset('no-thumbnail.jpg');
+        }
+    }
 }
