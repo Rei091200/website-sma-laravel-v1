@@ -33,29 +33,28 @@
 								<div class="logo text-center"><img src="{{(asset('admin/assets/img/logo-sekolah.jpg'))}}" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
-                            <form class="form-auth-small" action="/postlogin" method="POST">
+                            <form class="form-auth-small" action="/postregister" method="POST">
                                 {{csrf_field()}}
+                                <div class="form-group">
+									<label for="regist-name" class="control-label sr-only">Nama Depan</label>
+                                    <input name="nama_depan" type="text" class="form-control" placeholder="Nama">
+								</div>
 								<div class="form-group">
-									<label for="signin-email" class="control-label sr-only">Email</label>
+									<label for="regist-email" class="control-label sr-only">Email</label>
 									<input name="email" type="email" class="form-control" id="signin-email" placeholder="Email">
 								</div>
 								<div class="form-group">
-									<label for="signin-password" class="control-label sr-only">Password</label>
+									<label for="regist-password" class="control-label sr-only">Password</label>
 									<input name="password" type="password" class="form-control" id="signin-password" placeholder="Password">
-								</div>
-								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-							</form>
-							<form class="form-auth-small" action="/register" method="GET">
-                                {{csrf_field()}}
-								<button type="submit" class="btn btn-primary btn-success btn-sm">REGISTER</button>
+                                </div>
+								<button type="submit" class="btn btn-primary btn-lg btn-block">REGISTER</button>
 							</form>
 						</div>
 					</div>
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
-							<h1 class="heading">Sistem Informasi SMA Tadika Mesra</h1>
-							<p>by Reihan, Benny, & Fredy</p>
+							<h1 class="heading">Pendaftaran</p>
 						</div>
 					</div>
 					<div class="clearfix"></div>

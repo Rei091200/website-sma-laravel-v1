@@ -22,6 +22,7 @@ class Siswa extends Model
     {
         return $this->belongsToMany(Mapel::class)->withPivot(['nilai'])->withTimeStamps();
     }
+   
 
 
 }

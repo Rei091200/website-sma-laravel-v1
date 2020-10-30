@@ -15,8 +15,8 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('/register', 'SiteController@register');
-Route::get('/postregister', 'SiteController@postregister');
+Route::get('/register', 'AuthController@register')->name('register');
+Route::post('/postregister', 'AuthController@postregister');
 
 Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');

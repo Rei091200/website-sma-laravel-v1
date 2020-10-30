@@ -9,12 +9,12 @@ class SiteController extends Controller
 {
     public function home()
     {
-        return view('sites.home');
+        return view('home');
     }
     
     public function register()
     {
-        return view('sites.register');
+        return view('auths.register');
     }
 
     public function postregister(Request $request)
@@ -30,7 +30,7 @@ class SiteController extends Controller
         $request->request->add(['user_id' => $user->id]);
         $siswa = \App\Siswa::create($request->all());
 
-        return redirect('/')->with('sukses', 'Data pendaftaran berhasil dikirim');
+        return redirect('/dashboard')->with('sukses', 'Data pendaftaran berhasil dikirim');
     }
 
     public function singlepost($slug)
