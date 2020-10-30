@@ -24,7 +24,7 @@
                         Something Something
                     </h1>
                     <p>
-                        Something Somthing
+                        Something Something
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-6 search-course-right section-gap">
