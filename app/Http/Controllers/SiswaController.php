@@ -25,7 +25,6 @@ class SiswaController extends Controller
             'email' => 'required|email|unique:users',
             'jenis_kelamin' => 'required',
             'agama' => 'required',
-            'avatar' => 'mimes:jpg,png'
         ]);
         //Insert ke table users
         $user = new \App\User;
@@ -39,12 +38,6 @@ class SiswaController extends Controller
         //Insert ke table Siswa
         $request->request->add(['user_id' => $user->id]);
         $siswa = \App\Siswa::create($request->all());
-        if($request->hasFile('avatar'))
-        {
-            $request->file('avatar')->move('images/', $request->file('avatar')->getClientOriginalName());
-            $siswa->avatar = $request->file('avatar')->getClientOriginalName();
-            $siswa->save();
-        }
         return redirect('/siswa')->with('sukses', 'Data sukses diinput!');
     }
 

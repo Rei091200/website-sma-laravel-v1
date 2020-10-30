@@ -100,15 +100,6 @@
                         <label for="exampleFormControlTextarea1">Alamat</label>
                         <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3">{{old('alamat')}}</textarea>
                     </div>
-                    <div class="form-group{{$errors->has('avatar') ? ' has-error' : ''}}">
-                        <label for="exampleFormControlTextarea1">Avatar</label>
-                        <input type="file" name="avatar" class="form-control">
-                        <small id="emailHelp" class="form-text text-muted">Pastikan file berekstensi .jpg atau .png</small>
-                        @if($errors->has('avatar'))
-                            <span class="help-block">{{$errors->first('avatar')}}</span>
-                        @endif
-                    </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
