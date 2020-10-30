@@ -37,16 +37,13 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
 Route::group(['middleware' => ['auth', 'checkRole:admin,siswa']], function () 
 {
     Route::get('/dashboard','DashboardController@index');
-    Route::get('/posts', 'PostController@index')->name('posts.index');
-    Route::get('/posts/add', [
-        'uses' => 'PostController@add',
-        'as' => 'posts.add'
-    ]);
-    Route::get('/posts/create', [
-        'uses' => 'PostController@create',
-        'as' => 'posts.create'
-    ]);
 });
+
+Route::group(['middleware' => ['auth', 'checkRole: siswa']], function () 
+{
+    Route::get('profilsaya', 'SiswaController@profilsaya');
+});
+
 
 
 
