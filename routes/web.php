@@ -31,12 +31,8 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::get('/siswa/{id}/delete', 'SiswaController@delete');
     Route::get('/siswa/{id}/profile', 'SiswaController@profile');
     Route::post('/siswa/{id}/addnilai', 'SiswaController@addnilai');
-<<<<<<< HEAD
     Route::get('/siswa/{id}/{idmapel}/deletenilai', 'SiswaController@deletenilai');
     
-=======
-    Route::get('/posts', 'PostController@index');
->>>>>>> d7e00f014f1108ac8be946e2cd0aa6746f7d4c9b
 });
 
 Route::group(['middleware' => ['auth', 'checkRole:admin,siswa']], function () 
