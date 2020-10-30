@@ -68,7 +68,7 @@
                         </a>
                         {!!$post->content!!}
                         <p class="meta">
-                            {{$post->created_at->('d M Y')}} | Oleh <a href="#">{{$post->user->name}}</a>
+                            Oleh <a href="#">{{$post->user->name}}</a>
                         </p>
                         <a href="{{route('site.single.post'), $post->slug}}" class="details-btn d-flex justify-content-center align-items-center">
                             <span class="details">Details</span>
